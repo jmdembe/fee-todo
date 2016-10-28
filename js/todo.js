@@ -1,7 +1,7 @@
 (function() {
 
     var arrayList = [];
-
+    var counter = 0 ;
     var checkItem = document.querySelector('button.check');
     var removeItem = document.querySelector('button.delete');
 
