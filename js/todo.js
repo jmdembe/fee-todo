@@ -1,13 +1,22 @@
 (function() {
 
+    var arrayList = [];
+
     document //submit feature
         .querySelector('form')
         .addEventListener('submit', function storeListItem(event) {   //submit button to store the list item
           event.preventDefault();
 
           var item = document.querySelector('.new-todo');
-          console.log(item.value);
           addListItem(item.value);
+
+          var itemList = {
+              text: item.value,
+              time: Date.now()
+          };
+
+          arrayList.push(itemList);
+          console.log(arrayList);
         });
 
     function addListItem(text) {    //adds list items upon entry
