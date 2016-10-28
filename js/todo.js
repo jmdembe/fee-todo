@@ -7,4 +7,11 @@
             console.log("HELLO!");
         });
 
+    function addListItem(text) {;
+        var listItem = document.createElement('li');
+        listItem.innerText = text;
+        document.querySelector('ul.items').appendChild(listItem);
+    }
+
+
 }());
