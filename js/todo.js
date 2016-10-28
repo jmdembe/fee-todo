@@ -24,7 +24,12 @@
 
     function addListItem(text) {    //adds list items upon entry
         var listItem = document.createElement('li');
-        listItem.innerText = text;
+        var addArticle = document.createElement('article');
+        var checkButton = checkItem;
+        checkButton.querySelector('button:first-child').addClass('check');
+        var removeButton = removeItem;
+        removeButton.querySelector('button.last-child').addClass('delete');
+        var addP = document.createElement(p);
         document.querySelector('ul.items').appendChild(listItem);
     }
 
