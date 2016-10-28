@@ -2,6 +2,9 @@
 
     var arrayList = [];
 
+    var checkItem = document.querySelector('button.check');
+    var removeItem = document.querySelector('button.delete');
+
     document //submit feature
         .querySelector('form')
         .addEventListener('submit', function storeListItem(event) {   //submit button to store the list item
