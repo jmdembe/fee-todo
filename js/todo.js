@@ -18,6 +18,7 @@
 
           arrayList.push(itemList);
           console.log(arrayList);
+
         });
 
     function addListItem(text) {    //adds list items upon entry
@@ -39,10 +40,6 @@
 
         listItem.appendChild(addArticle);
         document.querySelector('ul.items').appendChild(listItem);
-    }
+      }
 
-
-
-
-
-}());
+})();
