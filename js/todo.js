@@ -42,4 +42,13 @@
         document.querySelector('ul.items').appendChild(listItem);
       }
 
+
+      document
+          .querySelector('.items')
+          .addEventListener('click', function completedItem (event) {
+              event.target.classList.add('completed');
+
+
+          });
+
 })();
