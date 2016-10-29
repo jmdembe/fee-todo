@@ -2,8 +2,6 @@
 
     var arrayList = [];
     var counter = 0 ;
-    var checkItem = document.querySelector('button.check');
-    var removeItem = document.querySelector('button.delete');
 
     document //submit feature
         .querySelector('form')
@@ -25,11 +23,21 @@
     function addListItem(text) {    //adds list items upon entry
         var listItem = document.createElement('li');
         var addArticle = document.createElement('article');
-        var checkButton = checkItem;
-        checkButton.querySelector('button:first-child').addClass('check');
-        var removeButton = removeItem;
-        removeButton.querySelector('button.last-child').addClass('delete');
-        var addP = document.createElement(p);
+
+        var checkButton = document.createElement('button');
+        checkButton.classList.add('check');
+        addArticle.appendChild(checkButton);
+
+        var addP = document.createElement('p');
+        addP.innerText = text;
+        addArticle.appendChild(addP);
+
+        var deleteButton = document.createElement('button');
+        deleteButton.classList.add('delete');
+        deleteButton.innerText = 'X';
+        addArticle.appendChild(deleteButton);
+
+        listItem.appendChild(addArticle);
         document.querySelector('ul.items').appendChild(listItem);
     }
 
