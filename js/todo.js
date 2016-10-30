@@ -46,7 +46,7 @@
       document
           .querySelector('.items')
           .addEventListener('click', function completedItem (event) {
-
+              
 
           });
 
