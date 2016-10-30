@@ -46,7 +46,6 @@
       document
           .querySelector('.items')
           .addEventListener('click', function completedItem (event) {
-              event.target.classList.add('completed');
 
 
           });
