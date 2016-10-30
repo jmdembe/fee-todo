@@ -1,6 +1,6 @@
 (function() {
 
-    var arrayList = [];
+    window.arrayList = window.arrayList || [];
     var counter = 0 ;
 
     document //submit feature
@@ -46,7 +46,7 @@
       document
           .querySelector('.items')
           .addEventListener('click', function completedItem (event) {
-              
+
 
           });
 
