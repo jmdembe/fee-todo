@@ -18,11 +18,10 @@
                 time: Date.now()
             };
 
-            itemList[counter] = counter;
+            toDoList.push(itemList);
+            arrayProperties[counter] = counter;
             arrayProperties[itemList] = itemList;
 
-            toDoList.push(itemList);
-            console.log(toDoList);
         });
 
         function addListItem(text) {    //adds list items upon entry

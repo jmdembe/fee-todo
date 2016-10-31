@@ -4,17 +4,16 @@
 
     document
         .querySelector('.items')
-        .addEventListener('click', function completedItem (event) {
+        .addEventListener('click', function itemStatus (event) {
               if (event.target.tagName === 'BUTTON' && event.target.className === 'check' ) {
                   console.log("LOOK AT ME!");
                   event.target.parentNode.classList.add('completed');
               }
 
-              if (event.target.tagName === 'BUTTON' && event.target.className === 'delete' ) {
-                  console.log("Next up-removing list items");
+              if (event.target.tagName === 'BUTTON' && event.target.className === 'delete') {
+                  event.target.parentNode.removeChild('article');
               }
         });
-      console.log(arrayProperties);
 
 
 })();
