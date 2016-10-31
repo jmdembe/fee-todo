@@ -1,8 +1,8 @@
 (function (){
-    if (typeof(window.arrayList) !== 'object') {
-      window.arrayList = [];
-    }
+    window.arrayProperties = window.arrayProperties || {};
 
+      var toDoList = [];
+      var counter = 0;
 
       document //submit feature
           .querySelector('form')
@@ -11,11 +11,18 @@
 
             var item = document.querySelector('.new-todo');
             addListItem(item.value);
+            counter++;
 
             var itemList = {
                 text: item.value,
                 time: Date.now()
             };
+
+            itemList[counter] = counter;
+            arrayProperties[itemList] = itemList;
+
+            toDoList.push(itemList);
+            console.log(toDoList);
         });
 
         function addListItem(text) {    //adds list items upon entry
