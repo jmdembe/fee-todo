@@ -58,8 +58,10 @@
               if (event.target.tagName === 'BUTTON' && event.target.className === 'delete') {
                   document.querySelector('.items').removeChild(event.target.parentNode.parentNode);
                   // update the counter!!
+                  window.todos.updateCounter(-1);
                   // also, can we remove that object from our data array??
               }
+              updateIncompleteCounterUI();
         });
 
         function updateIncompleteCounterUI() {
